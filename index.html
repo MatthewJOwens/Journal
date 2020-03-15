@@ -16,45 +16,67 @@
   <title>Boise Codeworks Journal</title>
 </head>
 
-<body>
-  <h1>Journal (format later)</h1>
-  <h3>Three struggles, three successes, and three things I look forward to.</h3>
-  <h4>Week One</h4>
-  <p>"The first three weeks are the hardest." They told us this on day one. And day two. And maybe day three. I just
-    have to keep reminding myself about it. I've been struggling with getting frustrated at the sheer amount of things I
-    don't know and am trying to learn all at once. I often feel like The Big Dumb and I know more of those days are
-    coming. I do, however, feel like I'm middle of the pack. Neither the oldest nor the youngest. Neither the best nor
-    the worst, but solidly average. That said, Friday made me feel a little different because when I struggled with
-    something and tried to talk to my neighbors about it, none of them were ever as far as I was. I honestly got most of
-    the assignment done in class. That's a good feeling, to feel like I actually know what I'm doing. Or that I'm at
-    least not falling behind.</p>
-  <p>Something I struggled with this week was getting Font Awesome to actually work on my pages. I tried with the script
-    given to me by Font Awesome in my e-mail when I gave it to them to get that very thing. I tried with the link from
-    BalloonPop. I tried with both. Tried a new link. A different version. Multiple different versions, with and without
-    the script. Just couldn't get it working. One of my seniors helped me get it working by first telling me to include
-    both, then telling me that sometimes the fab is sometimes fab or fav or fas and I should try those, and when that
-    didn't work showed me a VS Code extension that she uses to auto-generate the needed components. We tried that and it
-    worked like a charm.</p>
-  <p>For something more mundane, something I had trouble with was during the Checkpoint, where we needed to have buttons
-    that extended past the card they were a part of, or were offset in some way. We were given a hint that we would want
-    to use <code>position: absolute;</code> so that's what I was focused on. (Throughout this assignment, I struggled
-    with figuring out the difference between absolute, relative, static, fixed, initial, inherit, and unset.) I used
-    absolute but the button was set off to the side. After investigating, I found that it was set to the right because
-    the start of the button was centered, but I wanted it to be centered using the center of the button. In the end, I
-    just measured the button's width using Chrome's dev tools and used CSS to change its position by half that many
-    pixels. </p>
-  <p>The problem then was that the card itself was also supposed to be offset from the background, so there would be
-    white-space under half of the card. No matter what I did, I couldn't find the answer. I asked Jim to see what
-    direction I should be looking in and he said he thought he remembered using negative margins. I used a custom class
-    to impose a negative margin on the card itself and it moved the height of the row up to where I wanted. This worked
-    for the purposes of that row, but it came with its own challenge: I then needed that much more margin between that
-    row and the next (where I put a row as a line break because I could find no other way to make one) so that the line
-    break wouldn't be running behind the cards.</p>
-  <p>(Another note: I ended up using z-order with a custom CSS class in order to have the bottom of the cards to show on
-    top of the picture from the next card in the mobile view because I couldn't get them to not overlap when viewing at
-    a smaller resolution. I realize as I'm writing this that I could use <code>mt-md-2</code> or something now that I've
-    learned that margin can be made responsive as well, which I only found out later in the assignment when I asked that
-    specific question of Darryl.</p>
+<body class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1>Journal (format later)</h1>
+      <h3>Three struggles, three successes, and three things I look forward to.</h3>
+      <h4>Week One</h4>
+      <p>"The first three weeks are the hardest." They told us this on day one. And day two. And maybe day three. I just
+        have to keep reminding myself about it. I've been struggling with getting frustrated at the sheer amount of
+        things I don't know and am trying to learn all at once. I often feel like The Big Dumb and I know more of those
+        days are coming. I do, however, feel like I'm middle of the pack. Neither the oldest nor the youngest. Neither
+        the best nor the worst, but solidly average. That said, Friday made me feel a little different because when I
+        struggled with something and tried to talk to my neighbors about it, none of them were ever as far as I was. I
+        honestly got most of the assignment done in class. That's a good feeling, to feel like I actually know what I'm
+        doing. Or that I'm at least not falling behind.</p>
+      <p>Something I struggled with this week was getting Font Awesome to actually work on my pages. I tried with the
+        script given to me by Font Awesome in my e-mail when I gave it to them to get that very thing. I tried with the
+        link from BalloonPop. I tried with both. Tried a new link. A different version. Multiple different versions,
+        with and without the script. Just couldn't get it working. One of my seniors helped me get it working by first
+        telling me to include both, then telling me that sometimes the fab is sometimes fab or fav or fas and I should
+        try those, and when that didn't work showed me a VS Code extension that she uses to auto-generate the needed
+        components. We tried that and it worked like a charm.</p>
+      <p>For something more mundane, something I had trouble with was during the Checkpoint, where we needed to have
+        buttons that extended past the card they were a part of, or were offset in some way. We were given a hint that
+        we would want to use <code>position: absolute;</code> so that's what I was focused on. (Throughout this
+        assignment, I struggled with figuring out the difference between absolute, relative, static, fixed, initial,
+        inherit, and unset.) I used absolute but the button was set off to the side. After investigating, I found that
+        it was set to the right because the start of the button was centered, but I wanted it to be centered using the
+        center of the button. In the end, I just measured the button's width using Chrome's dev tools and used CSS to
+        change its position by half that many pixels.</p>
+      <p>The problem then was that the card itself was also supposed to be offset from the background, so there would be
+        white-space under half of the card. No matter what I did, I couldn't find the answer. I asked Jim to see what
+        direction I should be looking in and he said he thought he remembered using negative margins. I used a custom
+        class to impose a negative margin on the card itself and it moved the height of the row up to where I wanted.
+        This worked for the purposes of that row, but it came with its own challenge: I then needed that much more
+        margin between that row and the next (where I put a row as a line break because I could find no other way to
+        make one) so that the line break wouldn't be running behind the cards.</p>
+      <p>(Another note: I ended up using z-order with a custom CSS class in order to have the bottom of the cards to
+        show on top of the picture from the next card in the mobile view because I couldn't get them to not overlap when
+        viewing at a smaller resolution. I realize as I'm writing this that I could use <code>mt-md-2</code> or
+        something now that I've learned that margin can be made responsive as well, which I only found out later in the
+        assignment when I asked that specific question of Darryl, our instructor.</p>
+      <p>As far as successes go, I have to say that the feeling I get from getting a piece of code to work, especially
+        after some difficulty, is a great feeling. Just this sense of accomplishment that I have felt only rarely. I'm
+        loving the challenges so far and it's feeling more and more like this is what I want to do with my life,
+        something that I have been unsure of lately, especially when I'm feeling stupid because I can't get something
+        right or when I can't remember things I just learned.</p>
+      <p>I look forward to getting into JavaScript. When doing the pre-coursework, I felt like the JavaScript was easier
+        to understand than the HTML or CSS. Not that I feel it'll be an easy section, but I look forward to learning
+        more about it. Also, it would be a nice feeling if I had a section where I felt like I had a natural aptitude
+        for it. If it wasn't such a struggle to grasp the concepts and remember stuff, I think I would feel like I'm not
+        forcing myself to learn a field of work that I'm not suited for.</p>
+      <p>I'm also looking forward to learning more about frameworks. JQuery, ReactJS, Popper, and the like. Tools that
+        were built specifically to make this job easier to do. I'm excited to see in what ways they affect the dev
+        process like Bootstrap does.</p>
+      <p>Finally, I'm looking forward to having my Checkpoint assignment reviewed and being told that I did a good job.
+        I'm particularly interested in the feedback on what I could do better. The one thing I forsee hearing about is
+        the buttons I mentioned earlier and maybe using the same method I used later in the project, just to be
+        consistent in how I lay out my sites. Using two different methods to achieve similar results is probably frowned
+        upon. But I'll let them tell me that.</p>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
